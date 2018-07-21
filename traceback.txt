@@ -1,72 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 41, in script
-    e "[html2]"
-Exception: Unknown text tag u'window.initErrorstack||(window.initErrorstack=[]),window.onerror=function(r,i,n,o,t){r.indexOf("Script error.")>-1||window.initErrorstack.push({errorMsg:r,url:i,lineNumber:n,column:o,errorObj:t'
+  File "game/script.rpy", line 34, in script
+    play music Generic_Filler.wav
+  File "renpy/common/000statements.rpy", line 120, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/script.rpy", line 34, in <module>
+    play music Generic_Filler.wav
+NameError: name 'Generic_Filler' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 41, in script
-    e "[html2]"
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\ast.py", line 652, in execute
-    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\exports.py", line 1199, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\character.py", line 1016, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\character.py", line 817, in do_display
-    **display_args)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\character.py", line 566, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\display\core.py", line 2649, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\display\core.py", line 3132, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\display\core.py", line 2055, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 485, in renpy.display.render.render_screen
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\display\layout.py", line 717, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\display\layout.py", line 717, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\display\layout.py", line 717, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\display\screen.py", line 669, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\display\layout.py", line 717, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\display\layout.py", line 1117, in render
-    st, at)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\display\layout.py", line 717, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\text\text.py", line 1825, in render
-    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\text\text.py", line 563, in __init__
-    self.paragraphs = self.segment(text.tokens, style, renders, text)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\text\text.py", line 1078, in segment
-    raise Exception("Unknown text tag %r" % text)
-Exception: Unknown text tag u'window.initErrorstack||(window.initErrorstack=[]),window.onerror=function(r,i,n,o,t){r.indexOf("Script error.")>-1||window.initErrorstack.push({errorMsg:r,url:i,lineNumber:n,column:o,errorObj:t'
+  File "game/script.rpy", line 34, in script
+    play music Generic_Filler.wav
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\ast.py", line 1828, in execute
+    self.call("execute")
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\ast.py", line 1816, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\statements.py", line 177, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 120, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\python.py", line 1943, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\python.py", line 1936, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 34, in <module>
+    play music Generic_Filler.wav
+NameError: name 'Generic_Filler' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.0.0.196
 Testing Grounds 1.0
-Fri Jul 20 16:31:55 2018
+Fri Jul 20 20:19:43 2018
