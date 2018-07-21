@@ -39,6 +39,8 @@ label start:
 
     e "PROOF: [html2]"
 
-    # This ends the game.
+    jump sideLabelTesting
 
+# This ends the game.
+label endGame:
     return
