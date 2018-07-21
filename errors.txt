@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 34: could not parse statement.
-    play music Generic Filler.wav
-                       ^
+File "game/script.rpy", line 13: indentation mismatch.
 
 Ren'Py Version: Ren'Py 7.0.0.196
-Fri Jul 20 20:19:17 2018
+Sat Jul 21 06:33:13 2018

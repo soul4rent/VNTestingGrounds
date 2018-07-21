@@ -2,9 +2,8 @@ init python:
     import urllib2 #only way to get this to work -_-
     resp = urllib2.urlopen("https://twitter.com/WebDevWith8051")
     html = resp.read()
-    print("If this returns true, this game can literally check your twitter to see if you posted something specific:")
+    print("Twitter Check Complete")
     print("Kyle" in html and "Me:" in html) #the start of something potentially beautiful
-    html2 = html[0:200]
 # The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
@@ -31,17 +30,25 @@ label start:
 
     # These display lines of dialogue.
 
-    play music "Generic_Filler.wav"
 
-    e "You've created a new Ren'Py game."
+    #testing audio functionality
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    e "This is a renpy testing ground for dev mechanics."
 
-    e "By the way, I can check your friggin twitter. Here's the proof:"
+    menu:
+        "Select option:"
 
-    e "PROOF: [html2]"
+        "audiotesting":
+            jump audioTesting
 
-    jump sideLabelTesting
+        "twitter testing":
+            jump twitterTesting
+
+        "Continue":
+            "now continuing"
+
+
+    jump sideLabelTesting #in testarc.py
 
 # This ends the game.
 label endGame:
