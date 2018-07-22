@@ -1,40 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 34, in script
-    play music Generic_Filler.wav
-  File "renpy/common/000statements.rpy", line 120, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "game/script.rpy", line 34, in <module>
-    play music Generic_Filler.wav
-NameError: name 'Generic_Filler' is not defined
+  File "game/zzz_redditTests.rpy", line 3, in script
+    python:
+  File "game/zzz_redditTests.rpy", line 9, in <module>
+    result = re.search('[1][.](.*)', dispText) #strip string of anything that isn't a post
+NameError: name 'dispText' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 34, in script
-    play music Generic_Filler.wav
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\ast.py", line 1828, in execute
-    self.call("execute")
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\ast.py", line 1816, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\statements.py", line 177, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 120, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\python.py", line 1943, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\python.py", line 1936, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 34, in <module>
-    play music Generic_Filler.wav
-NameError: name 'Generic_Filler' is not defined
+  File "game/zzz_redditTests.rpy", line 3, in script
+    python:
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\ast.py", line 862, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\python.py", line 1912, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/zzz_redditTests.rpy", line 9, in <module>
+    result = re.search('[1][.](.*)', dispText) #strip string of anything that isn't a post
+NameError: name 'dispText' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.0.0.196
 Testing Grounds 1.0
-Fri Jul 20 20:19:43 2018
+Sat Jul 21 21:08:18 2018

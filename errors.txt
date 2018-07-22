@@ -2,7 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 13: indentation mismatch.
+File "game/zzz_redditTests.rpy", line 10: invalid syntax
+    $ e (dispText[0:300])
+     ^
+    
 
 Ren'Py Version: Ren'Py 7.0.0.196
-Sat Jul 21 06:33:13 2018
+Sat Jul 21 21:00:47 2018
