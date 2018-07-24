@@ -2,8 +2,30 @@ label audioTesting:
 
     "performing audio tests"
 
-    play music "Generic_Filler.wav"
+    menu:
+        "Select track:"
 
-    "click to continue"
+        "Generic_Filler":
+            $song = "Generic_Filler.wav"
+
+
+
+    play music [song]
+
+    "Now testing Fadein/Out"
+
+    stop music fadeout 1.0
+
+    "..."
+
+    play music [song] fadein 1.0
+
+    "..."
+
+    stop music fadeout 5.0
+
+    "..."
+
+    play music [song] fadein 5.0
 
     jump start

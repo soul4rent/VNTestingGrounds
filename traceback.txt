@@ -1,26 +1,44 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/zzz_redditTests.rpy", line 3, in script
-    python:
-  File "game/zzz_redditTests.rpy", line 9, in <module>
-    result = re.search('[1][.](.*)', dispText) #strip string of anything that isn't a post
-NameError: name 'dispText' is not defined
+  File "game/zzz_audiotests.rpy", line 23, in script
+    "..."
+IOError: Couldn't find file '[song]'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/zzz_redditTests.rpy", line 3, in script
-    python:
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\ast.py", line 862, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\python.py", line 1912, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/zzz_redditTests.rpy", line 9, in <module>
-    result = re.search('[1][.](.*)', dispText) #strip string of anything that isn't a post
-NameError: name 'dispText' is not defined
+  File "game/zzz_audiotests.rpy", line 23, in script
+    "..."
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\ast.py", line 652, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\exports.py", line 1199, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\character.py", line 1016, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\character.py", line 817, in do_display
+    **display_args)
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\character.py", line 566, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\display\core.py", line 2649, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\display\core.py", line 3318, in interact_core
+    renpy.audio.audio.periodic()
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\audio\audio.py", line 988, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\audio\audio.py", line 932, in periodic_pass
+    c.periodic()
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\audio\audio.py", line 416, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\audio\audio.py", line 69, in load
+    rv = renpy.loader.load(fn)
+  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\loader.py", line 555, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file '[song]'.
 
 Windows-8-6.2.9200
 Ren'Py 7.0.0.196
 Testing Grounds 1.0
-Sat Jul 21 21:08:18 2018
+Mon Jul 23 17:15:23 2018
