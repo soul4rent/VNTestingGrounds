@@ -12,3 +12,5 @@ label redditTesting:
         e(result)
 
     e "The start of reddit testing"
+
+    jump start

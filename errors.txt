@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/zzz_redditTests.rpy", line 10: invalid syntax
-    $ e (dispText[0:300])
-     ^
-    
+File "game/script.rpy", line 58: end of line expected.
+    show Tinsel_Teeth_main.jpg
+                          ^
 
 Ren'Py Version: Ren'Py 7.0.0.196
-Sat Jul 21 21:00:47 2018
+Mon Jul 23 17:30:13 2018

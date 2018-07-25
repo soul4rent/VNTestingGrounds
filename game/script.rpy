@@ -38,11 +38,14 @@ init python:
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define e = Character("TTMain")
+
+image TTmain = im.Scale("Tinsel_Teeth_main.png", 540, 720)
+#Dang it, had to do it manually in the end. At least once you do it once, you in theory NEVER have to do it again.
+
 
 
 # The game starts here.
-
 label start:
 
     # Show a background. This uses a placeholder by default, but you can
@@ -51,16 +54,9 @@ label start:
 
     scene bg room
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    #shows TTmain image
+    show TTmain
 
-    show eileen happy
-
-    # These display lines of dialogue.
-
-
-    #testing audio functionality
 
     e "This is a renpy testing ground for dev mechanics."
 

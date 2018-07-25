@@ -1,13 +1,13 @@
-Mon Jul 23 17:15:15 2018
+Tue Jul 24 10:08:40 2018
 Windows-8-6.2.9200
 Ren'Py 7.0.0.196
  
 
 Bootstrap to the start of init.init took 0.08s
 Early init took 0.00s
-Loader init took 0.03s
+Loader init took 0.02s
 Loading error handling took 0.03s
-Loading script took 0.13s
+Loading script took 0.11s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -16,26 +16,25 @@ Creating Classes/Universal Functions
 SSL test, cross fingers
 Twitter Check Complete
 True
-Running init code took 1.42s
-Loading analysis data took 0.03s
+Running init code took 7.20s
+Loading analysis data took 0.05s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Kyle\\AppData\\Roaming/RenPy/backups\\Testing Grounds':
-Dump and make backups. took 0.07s
+Dump and make backups. took 0.08s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.02s
 DPI scale factor: 1.000000
 Creating interface object took 0.03s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.02s
 Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.08s
-Prepare screens took 0.06s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.07s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.08s
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.03s
@@ -43,7 +42,7 @@ Interface start took 0.03s
 primary display bounds: (0, 0, 1600, 900)
 swap interval: 1 frames
 Windowed mode.
-Screen sizes: virtual=(1280, 720) physical=(1269, 714) drawable=(1269, 714)
+Screen sizes: virtual=(1280, 720) physical=(1221, 687) drawable=(1221, 687)
 Vendor: 'Intel'
 Renderer: 'Intel(R) HD Graphics 4400'
 Version: '4.3.0 - Build 10.18.14.4264'
@@ -252,47 +251,25 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 2.7009999752s
+Total time until interface ready: 8.40899991989s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.017000 seconds.
-- Frame drawn at 0.030000 seconds.
-- Frame drawn at 0.046000 seconds.
-- Frame drawn at 0.064000 seconds.
-- 0.064000 seconds to render 5 frames.
-
-Full traceback:
-  File "game/zzz_audiotests.rpy", line 23, in script
-    "..."
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\ast.py", line 652, in execute
-    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\exports.py", line 1199, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\character.py", line 1016, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\character.py", line 817, in do_display
-    **display_args)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\character.py", line 566, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\display\core.py", line 2649, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\display\core.py", line 3318, in interact_core
-    renpy.audio.audio.periodic()
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\audio\audio.py", line 988, in periodic_thread_main
-    periodic_pass()
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\audio\audio.py", line 932, in periodic_pass
-    c.periodic()
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\audio\audio.py", line 416, in periodic
-    topf = load(self.file_prefix + filename + self.file_suffix)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\audio\audio.py", line 69, in load
-    rv = renpy.loader.load(fn)
-  File "C:\Users\Kyle\Desktop\Renpy\renpy-7.0.0-sdk\renpy\loader.py", line 555, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file '[song]'.
-
-While running game code:
-  File "game/zzz_audiotests.rpy", line 23, in script
-    "..."
-IOError: Couldn't find file '[song]'.
+- Frame drawn at 0.018667 seconds.
+- Frame drawn at 0.040667 seconds.
+- Frame drawn at 0.057667 seconds.
+- Frame drawn at 0.074667 seconds.
+- 0.074667 seconds to render 5 frames.
+Cleaning stores took 0.00s
+Init translation took 0.14s
+Build styles took 0.01s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.15s
+Build styles took 0.01s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
